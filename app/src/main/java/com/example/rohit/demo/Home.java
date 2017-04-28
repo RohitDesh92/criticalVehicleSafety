@@ -18,11 +18,14 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.cunoraz.gifview.library.GifView;
+
 public class Home extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     Button event ;
     Button mytrips;
+    GifView gif;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +65,6 @@ public class Home extends AppCompatActivity
         event.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
 
                 Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
                 Ringtone r = RingtoneManager.getRingtone(getApplicationContext(), notification);
